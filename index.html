@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gaza.boom</title>
+    <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="top-section">
+        <h1 class="title">Gaza.boom.il</h1>
+        <ul class="toolbar">
+            <li><a href="#top"><img src="https://www.pngplay.com/wp-content/uploads/7/Home-Logo-Transparent-Free-PNG.png" alt="Home" width="40" height="40"></a></li>
+            <li><a href="#secondSection"><img src="https://webstockreview.net/images/information-clipart-information-icon-1.png" alt="Info" width="40" height="40"></a></li>
+            <li><a href="#thirdSection"><img src="http://images.clipartpanda.com/location-icon-map-png-location_icon.png" alt="Interactive Map" width="40" height="40"></a></li>
+        </ul>      
+    </div>
+    <div class="bottom">
+        <p class="counter-text murdered"><span id="murderedCount">0</span> People Murdered</p>
+        <p class="counter-text injured"><span id="injuredCount">0</span> People Injured</p>
+        <p class="counter-text kidnapped"><span id="kidnappedCount">0</span> People kidnapped</p>
+        <p class="hamasisIsis ISIS">#HamasisISIS</p>
+        <div class="arrow-container">
+            <div class="line left-line"></div>
+            <div class="arrow" id="scrollArrow">↓</div>
+            <div class="line right-line"></div>
+        </div>
+    </div>
+    <div class="secondSection">
+        <div id="textContainer">
+            <p class="typingText"></p>
+            <p class="typingText"></p>
+        </div>
+        <div class="image-container">
+            <a href="https://x.com/EllaTravelsLove/status/1711694535053443102?s=20" target="_blank">
+                <img src="https://pbs.twimg.com/media/F8EpGvzWAAAwK0g?format=jpg&name=large" alt="Image 1" class="image">
+            </a>
+            <a href="https://x.com/EllaTravelsLove/status/1712385089965875452?s=20" target="_blank">
+                <img src="https://pbs.twimg.com/media/F8OdKLaWoAA_bst?format=jpg&name=large" alt="Image 2" class="image">
+            </a>
+            <a href="https://x.com/EllaTravelsLove/status/1713225594836582522?s=20" target="_blank">
+                <img src="https://pbs.twimg.com/media/F8aZlwvXwAA2Aum?format=jpg&name=large" alt="Image 3" class="image">
+            </a>
+        </div>
+    </div>
+    <div class="thirdSection">
+        
+        <div class="map-container">
+            <div id="map" style="width: 60%; height: 100%;"></div>
+            <div class="title-container">
+                <h1 id="map-title"><u><big>Live Map Of The War</big></u></h1>
+                <p id="map-text">Updates about all the events in israel - all in one place displayed on the map. Click on the markers to see detailed information</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

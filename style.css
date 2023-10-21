@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.top {
+    background-color: rgb(51, 43, 62);
+    color: white;
+    text-align: left;
+    padding: 20px;
+}
+
+.top-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f2; /* Set your preferred background color */
+    z-index: 10000; /* Make it higher than other elements */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s; /* Add a smooth transition */
+}
+
+/* CSS styles for the toolbar */
+.toolbar {
+    list-style: none;
+    display: flex;
+    margin: 10px;
+    padding: 0;
+}
+
+.toolbar li {
+    margin-right: 10px;
+}
+
+/* Hidden by default */
+.top-section.hidden {
+    transform: translateY(-100%); /* Hide the top section */
+}
+
+.title {
+    margin: 0;
+}
+
+.bottom {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 100px;
+    height: 75vh; /* Change the height to your desired value */
+}
+
+.secondSection {
+    background-color: #191919;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    height: 100vh; /* Change the height to your desired value */
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    transition: transform 1s ease-in-out; /* Add a CSS transition for the transform property */
+}
+
+.image:hover {
+    transform: scale(1.1); /* Increase size on hover */
+    filter: brightness(0.8);
+}
+
+.thirdSection {
+    background-color: #222222; /*#444654;*/
+    color: white;
+    text-align: center;
+    padding: 5px;
+    height: 110vh; /* Change the height to your desired value */
+}
+
+.map-container {
+  display: flex;
+  width: 100%;
+  height: 82vh;
+  margin: 20px auto;
+  overflow: hidden;
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word;
+}
+
+#map {
+  flex: 1; /* Take up remaining available space */
+  height: 100%;
+}
+
+.title-container {
+  width: 40%; /* Adjust the width as needed to create space beside the map */
+  text-align: left;
+  padding: 20px; /* Add padding to create space around the title */
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word;
+}
+#map-text {
+  font-size: 16px;
+}
+
+  
+
+/* Style the custom marker icon */
+.my-custom-icon {
+    color: #ff5733; /* Change the color of the icon */
+    font-size: 24px; /* Adjust the icon size as needed */
+    background-color: #fff; /* Background color for the icon */
+    border: 2px solid #ff5733; /* Border around the icon */
+    border-radius: 50%; /* Make the icon circular */
+    padding: 5px; /* Adjust the padding as needed */
+  }
+  
+
+
+
+.counter {
+    display: flex;
+    justify-content: space-around; /* or use "space-evenly" for more compact spacing */
+    align-items: center;
+}
+
+.counter-text {
+    margin: 10px;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: Roboto, serif;
+    background: #0000; /* Adjust the gradient colors */
+    background-clip: text;
+    -webkit-background-clip: text; /* For compatibility with WebKit-based browsers */
+    color: white;
+    opacity: 0; /* Initially hide the text */
+}
+
+.hamasisIsis{
+    line-height:100px;
+    margin: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Roboto, serif;
+    background: #00000000; /* Adjust the gradient colors */
+    background-clip: text;
+    -webkit-background-clip: text; /* For compatibility with WebKit-based browsers */
+    color: rgb(179, 0, 0);
+    opacity: 0; /* Initially hide the text */
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+}
+
+.arrow {
+    font-size: 30px;
+    cursor: pointer;
+    color: grey;
+}
+
+.left-line,
+.right-line {
+    height: 2px;
+    width: 30px; /* Adjust the width as needed */
+    background-color: grey;
+    margin: 0 10px; /* Space on both sides of the arrow */
+}
+
+#textContainer {
+    text-align: left;
+    max-width: 100vw;
+    white-space: pre-wrap;
+}
+
+.typingText {
+    margin: 0; /* Remove margin to reduce space between lines */
+    font-size: 20px; /* Adjust font size as needed */
+}
+
+
+/* animations */
+
+
+.murdered {
+    animation: appearInjured 0.5s forwards;
+}
+
+.injured {
+    animation: appearMurdered 0.5s forwards;
+    animation-delay: 1s; /* Delay the appearance of this text by 2 seconds */
+}
+
+.kidnapped {
+    animation: appearKidnapped 0.5s forwards;
+    animation-delay: 2s; /* Delay the appearance of this text by 4 seconds */
+}
+
+.ISIS {
+    animation: appearISIS 0.5s forwards;
+    animation-delay: 5.7s;
+}
+
+@keyframes appearMurdered {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appearInjured {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appearKidnapped {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appearISIS {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
